@@ -8,4 +8,16 @@ class Student {
   Student(this.firstName, this.lastName, this.grade);
 
   Student.withId(this.id, this.grade, this.lastName, this.firstName);
+
+  String get getStatus {
+    String message = "";
+    if (grade >= 50) {
+      message = "Geçti";
+    } else if (grade > 40) {
+      message = "Bütünlemeye kaldı";
+    } else {
+      message = "Kaldı";
+    }
+    return message;
+  }
 }
